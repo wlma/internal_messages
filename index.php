@@ -3,8 +3,8 @@
 /**
  * ownCloud - internal_messages
  *
- * @author Jorge Rafael García Ramos
- * @copyright 2012 Jorge Rafael García Ramos <kadukeitor@gmail.com>
+ * @author Jorge Rafael Garcï¿½a Ramos
+ * @copyright 2012 Jorge Rafael Garcï¿½a Ramos <kadukeitor@gmail.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -26,10 +26,10 @@ OCP\App::checkAppEnabled('internal_messages');
 
 OCP\App::setActiveNavigationEntry( 'internal_messages_index' );
 
-if (!OCP\App::isEnabled('user_photo')) {
+/*if (!OCP\App::isEnabled('user_photo')) {
     OCP\Template::printUserPage('internal_messages', 'no-user_photo-app');
     exit;
-}
+}*/
 
 $tmpl = new OCP\Template('internal_messages', 'messages', 'user');
 $tmpl->assign( 'messages' , OC_INT_MESSAGES::getMessages( OCP\USER::getUser() ) , false );
